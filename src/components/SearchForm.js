@@ -26,10 +26,11 @@ const SearchForm = () => {
 
     const searchData = await fetch(url);
     const data = await searchData.json();
-    // document.body.textContent = JSON.stringify(data, null, 4);
-    // const searchOptions
+    console.log(data);
     // console.log(data.query.search);
-    const results = data.query.search.map((option) => option.title);
+    const results = data.query.search.map((option) => {
+      return [option.title, option.pageid];
+    });
     console.log(results);
     setResults(results);
   };
@@ -39,9 +40,8 @@ const SearchForm = () => {
         <input placeholder='search wikipedia' onChange={searchField}></input>
         <input type='image' value='search'></input>
       </form>
-      {results.map((page) => (
-        <a href=''>{page}</a>
-      ))}
+      {/* {results ? 
+      results.map((page) => <a href=''>{page}</a>) : <div></div>} */}
     </div>
   );
 };
