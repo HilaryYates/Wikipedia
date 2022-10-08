@@ -27,7 +27,9 @@ const SearchForm = () => {
     const data = await searchData.json();
     // document.body.textContent = JSON.stringify(data, null, 4);
     // const searchOptions
-    console.log(data.query.search[0]);
+    // console.log(data.query.search);
+    const results = data.query.search.map((option) => option.title);
+    console.log(results);
   };
   return (
     <div>
