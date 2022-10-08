@@ -40,7 +40,12 @@ const SearchForm = () => {
         <input type='image' value='search'></input>
       </form>
       {resultInfo.map((result) => (
-        <a href={"http://en.wikipedia.org/?curid=" + result[1]}>{result[0]}</a>
+        <a
+          class='page-link'
+          href={"http://en.wikipedia.org/?curid=" + result[1]}
+        >
+          {result[0]}
+        </a>
       ))}
     </div>
   );
