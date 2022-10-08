@@ -27,9 +27,10 @@ const SearchForm = () => {
     const searchData = await fetch(url);
     const data = await searchData.json();
     const results = data.query.search.map((option) => [
-      option.title, //string
-      option.pageid, //num
+      option.title,
+      option.pageid + "",
     ]);
+    console.log(results);
     setResultInfo(results);
   };
   return (
@@ -39,10 +40,12 @@ const SearchForm = () => {
         <input type='image' value='search'></input>
       </form>
       {resultInfo.map((result) => (
-        <a href={result[1]}>{result[0]}</a>
+        <a href={"http://en.wikipedia.org/?curid=" + result[1]}>{result[0]}</a>
       ))}
     </div>
   );
 };
 
 export default SearchForm;
+
+// http://en.wikipedia.org/?curid=18630637
