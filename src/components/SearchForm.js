@@ -2,8 +2,6 @@ import React, { useState } from "react";
 
 const SearchForm = () => {
   const [search, setSearch] = useState("");
-  const [pageTitle, setPageTitles] = useState([]);
-  const [pageId, setPageId] = useState([]);
   const [resultInfo, setResultInfo] = useState([]);
   const searchField = (event) => {
     setSearch(event.target.value);
@@ -29,11 +27,10 @@ const SearchForm = () => {
     const searchData = await fetch(url);
     const data = await searchData.json();
     const results = data.query.search.map((option) => [
-      option.title,
-      option.pageid,
+      option.title, //string
+      option.pageid, //num
     ]);
     setResultInfo(results);
-    // console.log(results);
   };
   return (
     <div>
@@ -41,8 +38,9 @@ const SearchForm = () => {
         <input placeholder='search wikipedia' onChange={searchField}></input>
         <input type='image' value='search'></input>
       </form>
-      {/* {pageTitle ? 
-      results.map((page) => <a href=''>{page}</a>) : <div></div>} */}
+      {resultInfo.map((result) => (
+        <a href={result[1]}>{result[0]}</a>
+      ))}
     </div>
   );
 };
