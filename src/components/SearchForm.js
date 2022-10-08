@@ -34,10 +34,11 @@ const SearchForm = () => {
     setResultInfo(results);
   };
   return (
-    <div>
-      <form onSubmit={searchQuery}>
+    <div class='input-container'>
+      <form class='input' onSubmit={searchQuery}>
         <input placeholder='search wikipedia' onChange={searchField}></input>
         <input
+          class='search-img'
           type='image'
           src='https://assets.stickpng.com/images/59cfc4d2d3b1936210a5ddc7.png'
           value='search'
