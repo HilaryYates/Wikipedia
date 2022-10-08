@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 const SearchForm = () => {
-  const [search, setSearch] = useState(0);
+  const [search, setSearch] = useState("");
+  const [results, setResults] = useState([]);
   const searchField = (event) => {
     setSearch(event.target.value);
   };
@@ -30,6 +31,7 @@ const SearchForm = () => {
     // console.log(data.query.search);
     const results = data.query.search.map((option) => option.title);
     console.log(results);
+    setResults(results);
   };
   return (
     <div>
@@ -37,6 +39,9 @@ const SearchForm = () => {
         <input placeholder='search wikipedia' onChange={searchField}></input>
         <input type='image' value='search'></input>
       </form>
+      {results.map((page) => (
+        <a href=''>{page}</a>
+      ))}
     </div>
   );
 };
