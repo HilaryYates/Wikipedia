@@ -4,6 +4,7 @@ const SearchForm = () => {
   const [search, setSearch] = useState("");
   const [pageTitle, setPageTitles] = useState([]);
   const [pageId, setPageId] = useState([]);
+  const [resultInfo, setResultInfo] = useState([]);
   const searchField = (event) => {
     setSearch(event.target.value);
   };
@@ -27,14 +28,12 @@ const SearchForm = () => {
 
     const searchData = await fetch(url);
     const data = await searchData.json();
-    console.log(data);
-    console.log(data.query.search);
-    const resultTitles = data.query.search.map((option) => option.title);
-    console.log(resultTitles);
-    setPageTitles(resultTitles);
-    const pageIds = data.query.search.map((option) => option.pageid);
-    console.log(pageIds);
-    setPageId(pageIds);
+    const results = data.query.search.map((option) => [
+      option.title,
+      option.pageid,
+    ]);
+    setResultInfo(results);
+    // console.log(results);
   };
   return (
     <div>
