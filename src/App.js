@@ -2,12 +2,15 @@ import "./App.css";
 import "./components/SearchForm";
 import SearchForm from "./components/SearchForm";
 import Logo from "./components/Logo";
+// import Scroll from "./components/Scroll";
 
 function App() {
   return (
     <div>
       <Logo />
+      {/* <Scroll /> */}
       <SearchForm />
+      {/* <Scroll /> */}
     </div>
   );
 }

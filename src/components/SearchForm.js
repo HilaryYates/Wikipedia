@@ -34,16 +34,18 @@ const SearchForm = () => {
     setResultInfo(results);
   };
   return (
-    <div class='input-container'>
-      <form class='input' onSubmit={searchQuery}>
-        <input placeholder='search wikipedia' onChange={searchField}></input>
-        <input
-          class='search-img'
-          type='image'
-          src='https://assets.stickpng.com/images/59cfc4d2d3b1936210a5ddc7.png'
-          value='search'
-        ></input>
-      </form>
+    <div>
+      <div>
+        <form class='input' onSubmit={searchQuery}>
+          <input placeholder='search wikipedia' onChange={searchField} />
+          <input
+            class='search-img'
+            type='image'
+            src='https://assets.stickpng.com/images/59cfc4d2d3b1936210a5ddc7.png'
+            value='search'
+          />
+        </form>
+      </div>
       {resultInfo.map((result) => (
         <a
           class='page-link'
