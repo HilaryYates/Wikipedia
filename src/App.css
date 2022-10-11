@@ -2,10 +2,16 @@
   box-sizing: border-box;
 }
 
+.page-link:hover {
+  color: #fff;
+  background-color: #a1b3f3;
+}
+
 .page-link,
 .page-link:visited {
-  color: #000000;
-  display: block;
+  /* color: #000000; */
+  /* display: block; */
+  text-decoration: none;
 }
 
 .logo-container {
@@ -21,12 +27,8 @@
 }
 
 .input {
-  /* padding-top: 260px;
-  padding-left: 520px; */
   margin-top: 290px;
-  margin-left: 490px;
-  /* margin-top: 200px; */
-  /* border: 1px solid red; */
+  margin-left: 500px;
 }
 
 .search-img {
