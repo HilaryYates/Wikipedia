@@ -47,12 +47,14 @@ const SearchForm = () => {
         </form>
       </div>
       {resultInfo.map((result) => (
-        <a
-          class='page-link'
-          href={"http://en.wikipedia.org/?curid=" + result[1]}
-        >
-          {result[0]}
-        </a>
+        <div class='page-link-container'>
+          <a
+            class='page-link'
+            href={"http://en.wikipedia.org/?curid=" + result[1]}
+          >
+            {result[0]}
+          </a>
+        </div>
       ))}
     </div>
   );
