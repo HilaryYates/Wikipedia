@@ -6,7 +6,7 @@ import Logo from "./components/Logo";
 
 function App() {
   return (
-    <div>
+    <div class='main'>
       <Logo />
       {/* <Scroll /> */}
       <SearchForm />
