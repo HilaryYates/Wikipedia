@@ -30,7 +30,7 @@ const SearchForm = () => {
       option.title,
       option.pageid + "",
     ]);
-    console.log(results);
+    // console.log(results);
     setResultInfo(results);
   };
   return (
@@ -61,5 +61,3 @@ const SearchForm = () => {
 };
 
 export default SearchForm;
-
-// http://en.wikipedia.org/?curid=18630637
