@@ -4,7 +4,6 @@ const Register = () => {
   return (
     <div>
       <form>
-        <div>Register</div>
         <div>Name</div>
         <input type='text' />
         <div>Email</div>

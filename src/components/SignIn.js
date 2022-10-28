@@ -9,7 +9,7 @@ const SignIn = ({ onRouteChange }) => {
         <input type='email' />
         <div>Password</div>
         <input type='password' />
-        <input onClick={onRouteChange} type='submit' />
+        <input onClick={() => onRouteChange("home")} type='submit' />
       </form>
     </div>
   );

@@ -5,15 +5,15 @@ import SignIn from "./components/SignIn";
 import Register from "./components/Register";
 import SearchForm from "./components/SearchForm";
 import Logo from "./Logo";
-import SignOut from "./components/SignOut";
+import Navigation from "./components/Navigation";
 
 class App extends Component {
   constructor() {
     super();
     this.state = { route: "signed-out" };
   }
-  onRouteChange = () => {
-    this.setState({ route: "home" });
+  onRouteChange = (route) => {
+    this.setState({ route: route });
   };
   render() {
     return (
@@ -21,10 +21,11 @@ class App extends Component {
         {this.state.route === "signed-out" ? (
           <div>
             <SignIn onRouteChange={this.onRouteChange} />
+            <Register />
           </div>
         ) : (
           <div>
-            <SignOut />
+            <Navigation onRouteChange={this.onRouteChange} />
             <Logo />
             <SearchForm />
           </div>
