@@ -1,6 +1,4 @@
-import React from "react";
-
-const Register = () => {
+const Register = ({ onRouteChange }) => {
   return (
     <div>
       <form>
@@ -10,7 +8,7 @@ const Register = () => {
         <input type='email' />
         <div type='password'>Password</div>
         <input type='password' />
-        <input type='submit' />
+        <input type='submit' onClick={() => onRouteChange("home")} />
       </form>
     </div>
   );

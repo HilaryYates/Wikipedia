@@ -11,6 +11,7 @@ const SignIn = ({ onRouteChange }) => {
         <input type='password' />
         <input onClick={() => onRouteChange("home")} type='submit' />
       </form>
+      <button onClick={() => onRouteChange("register")}>Register</button>
     </div>
   );
 };

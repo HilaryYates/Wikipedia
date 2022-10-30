@@ -18,15 +18,19 @@ class App extends Component {
   render() {
     return (
       <div class='main'>
-        {this.state.route === "signed-out" ? (
+        {this.state.route === "home" ? (
+          <div>
+            <Navigation onRouteChange={this.onRouteChange} />
+            <Logo />
+            <SearchForm />
+          </div>
+        ) : this.state.route === "signed-out" ? (
           <div>
             <SignIn onRouteChange={this.onRouteChange} />
           </div>
         ) : (
           <div>
-            <Navigation onRouteChange={this.onRouteChange} />
-            <Logo />
-            <SearchForm />
+            <Register onRouteChange={this.onRouteChange} />
           </div>
         )}
       </div>
@@ -35,5 +39,3 @@ class App extends Component {
 }
 
 export default App;
-
-// register button triggers register form
