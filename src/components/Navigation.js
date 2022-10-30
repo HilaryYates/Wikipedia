@@ -3,7 +3,7 @@ import React from "react";
 const Navigation = ({ onRouteChange }) => {
   return (
     <div>
-      <p onClick={() => onRouteChange("signed-out")}>Sign Out</p>
+      <button onClick={() => onRouteChange("signed-out")}>Sign Out</button>
     </div>
   );
 };
