@@ -12,6 +12,11 @@ class App extends Component {
     super();
     this.state = { route: "signed-out" };
   }
+
+  componentDidMount() {
+    fetch("http:localhost:3000");
+  }
+
   onRouteChange = (route) => {
     this.setState({ route: route });
   };
