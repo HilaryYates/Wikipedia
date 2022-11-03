@@ -10,17 +10,17 @@ import Navigation from "./components/Navigation";
 class App extends Component {
   constructor() {
     super();
-    this.state = { route: "signed-out" };
-  }
-
-  componentDidMount() {
-    fetch("http:localhost:3000")
-      .then((response) => response.json)
-      .then(console.log(data));
+    this.state = { route: "signed-out", user: { id: "", name: "", email: "" } };
   }
 
   onRouteChange = (route) => {
     this.setState({ route: route });
+  };
+
+  loadUser = (data) => {
+    this.setState({
+      user: { id: data.id, name: data.name, email: data.email },
+    });
   };
   render() {
     return (
