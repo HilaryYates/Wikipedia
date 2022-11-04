@@ -14,38 +14,37 @@ class Register extends React.Component {
   onPasswordChange = (event) => {
     this.setState({ password: event.target.value });
   };
-  onSubmitRegister = () => {
-    fetch("https://localhost:3000/register", {
+  onSubmitRegister = (event) => {
+    event.preventDefault();
+    fetch("http://localhost:3000/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name: this.state.name,
         email: this.state.email,
-        password: this.state.password,
+        name: this.state.name,
       }),
     })
       .then((response) => response.json())
       .then((user) => {
         if (user) {
+          this.props.loadUser(user);
           this.props.onRouteChange("home");
         }
       });
-    console.log(this.state);
   };
+
   render() {
     const { onRouteChange } = this.props;
 
     return (
       <div>
-        <form>
-          <div>Name</div>
-          <input type='text' onChange={this.onNameChange} />
-          <div>Email</div>
-          <input type='email' onChange={this.onEmailChange} />
-          <div type='password'>Password</div>
-          <input type='password' onChange={this.onPasswordChange} />
-          <input type='submit' onClick={() => onRouteChange("home")} />
-        </form>
+        <div>Name</div>
+        <input type='text' onChange={this.onNameChange} />
+        <div>Email</div>
+        <input type='email' onChange={this.onEmailChange} />
+        <div>Password</div>
+        <input type='password' onChange={this.onPasswordChange} />
+        <input type='submit' onClick={this.onSubmitRegister} />
       </div>
     );
   }

@@ -37,7 +37,10 @@ class App extends Component {
           </div>
         ) : (
           <div>
-            <Register onRouteChange={this.onRouteChange} />
+            <Register
+              onRouteChange={this.onRouteChange}
+              loadUser={this.loadUser}
+            />
           </div>
         )}
       </div>
