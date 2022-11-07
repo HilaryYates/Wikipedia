@@ -22,10 +22,12 @@ class Register extends React.Component {
       body: JSON.stringify({
         email: this.state.email,
         name: this.state.name,
+        password: this.state.password,
       }),
     })
       .then((response) => response.json())
       .then((user) => {
+        console.log(user);
         if (user) {
           this.props.loadUser(user);
           this.props.onRouteChange("home");

@@ -18,10 +18,12 @@ class SignIn extends React.Component {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         email: this.state.signInEmail,
+        password: this.state.signInPassword,
       }),
     })
       .then((response) => response.json())
       .then((user) => {
+        console.log(user);
         if (user.id) {
           this.props.loadUser(user);
           this.props.onRouteChange("home");
