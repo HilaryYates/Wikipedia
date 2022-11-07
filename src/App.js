@@ -33,7 +33,10 @@ class App extends Component {
           </div>
         ) : this.state.route === "signed-out" ? (
           <div>
-            <SignIn onRouteChange={this.onRouteChange} />
+            <SignIn
+              onRouteChange={this.onRouteChange}
+              loadUser={this.loadUser}
+            />
           </div>
         ) : (
           <div>
