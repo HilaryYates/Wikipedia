@@ -1,4 +1,5 @@
 import React from "react";
+import { Form } from "react-bootstrap";
 
 class Register extends React.Component {
   constructor() {
@@ -38,13 +39,15 @@ class Register extends React.Component {
   render() {
     return (
       <div>
-        <div>Name</div>
-        {/* <input type='text' onChange={this.onNameChange} />
-        <div>Email</div>
-        <input type='email' onChange={this.onEmailChange} />
-        <div>Password</div>
-        <input type='password' onChange={this.onPasswordChange} />
-        <input type='submit' onClick={this.onSubmitRegister} /> */}
+        <Form>
+          <div>Name</div>
+          <input type='text' onChange={this.onNameChange} />
+          <div>Email</div>
+          <input type='email' onChange={this.onEmailChange} />
+          <div>Password</div>
+          <input type='password' onChange={this.onPasswordChange} />
+          <input type='submit' onClick={this.onSubmitRegister} />
+        </Form>
       </div>
     );
   }
