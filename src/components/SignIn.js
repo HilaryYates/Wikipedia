@@ -36,10 +36,10 @@ class SignIn extends React.Component {
     return (
       <div>
         <form>
-          <div>Sign In</div>
-          <div>Email</div>
+          {/* <div>Sign In</div> */}
+          {/* <div>Email</div> */}
           <input type='email' onChange={this.onEmailChange} />
-          <div>Password</div>
+          {/* <div>Password</div> */}
           <input type='password' onChange={this.onPasswordChange} />
           <input onClick={this.onSubmitSignIn} type='submit' />
         </form>
