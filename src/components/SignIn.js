@@ -1,4 +1,5 @@
 import React from "react";
+import { Form } from "react-bootstrap";
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -35,14 +36,14 @@ class SignIn extends React.Component {
     const { onRouteChange } = this.props;
     return (
       <div>
-        <form>
-          {/* <div>Sign In</div> */}
-          {/* <div>Email</div> */}
+        <Form.Group>
+          <div>Sign In</div>
+          <div>Email</div>
           <input type='email' onChange={this.onEmailChange} />
-          {/* <div>Password</div> */}
+          <div>Password</div>
           <input type='password' onChange={this.onPasswordChange} />
           <input onClick={this.onSubmitSignIn} type='submit' />
-        </form>
+        </Form.Group>
         <button onClick={() => onRouteChange("register")}>Register</button>
       </div>
     );
