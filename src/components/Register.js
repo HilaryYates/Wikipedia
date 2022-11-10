@@ -38,15 +38,6 @@ class Register extends React.Component {
   render() {
     return (
       <div>
-        {/* <Form.Group className='mb-3' controlId='formBasicEmail'>
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type='email' placeholder='Enter email' />
-          <Form.Text className='text-muted'>
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group> */}
-        {/* <Form.Group> */}
-        {/* <Form.Control type='password' placeholder='Password' /> */}
         <div>Name</div>
         <input type='text' onChange={this.onNameChange} />
         <div>Email</div>
@@ -54,8 +45,6 @@ class Register extends React.Component {
         <div>Password</div>
         <input type='password' onChange={this.onPasswordChange} />
         <input type='submit' onClick={this.onSubmitRegister} />
-        {/* </Form.Group> */}
-        Hello
       </div>
     );
   }
