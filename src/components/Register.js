@@ -39,7 +39,6 @@ class Register extends React.Component {
   render() {
     return (
       <div>
-        \
         <Form>
           <Form.Group>
             <form>
