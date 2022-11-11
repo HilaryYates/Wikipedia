@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -13,7 +14,8 @@ class SignIn extends React.Component {
   };
   onSubmitSignIn = (event) => {
     event.preventDefault();
-    fetch("https://ancient-eyrie-70341.herokuapp.com/signin", {
+    fetch("https://localhost:3000/signin", {
+      //https://ancient-eyrie-70341.herokuapp.com/signin
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -35,19 +37,23 @@ class SignIn extends React.Component {
     const { onRouteChange } = this.props;
     return (
       <div>
-        <form>
-          <div>Sign In</div>
-          <div>Email</div>
-          <input type='email' onChange={this.onEmailChange} />
-          <div>Password</div>
-          <input type='password' onChange={this.onPasswordChange} />
-          <input
-            onClick={this.onSubmitSignIn}
-            type='image'
-            src='../../wikipedia search button.png'
-          />
-        </form>
-        <button onClick={() => onRouteChange("register")}>Register</button>
+        <div>Log in or</div>
+        <div>Email</div>
+
+        <input type='email' onChange={this.onEmailChange} />
+        <div>Password</div>
+
+        <input type='password' onChange={this.onPasswordChange} />
+        <input
+          onClick={this.onSubmitSignIn}
+          type='image'
+          src='/public/btn.png'
+          alt='Sign in'
+        />
+        {/* <button onClick={() => onRouteChange("register")}>Register</button> */}
+        <Button variant='primary' onClick={() => onRouteChange("register")}>
+          Sign up
+        </Button>
       </div>
     );
   }
