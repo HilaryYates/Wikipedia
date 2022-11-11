@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import "./SignIn.css";
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -39,18 +40,23 @@ class SignIn extends React.Component {
       <div>
         <div>Log in or</div>
         <div>Email</div>
-
-        <input type='email' onChange={this.onEmailChange} />
+        <div class='email-container'>
+          <input
+            type='email'
+            onChange={this.onEmailChange}
+            class='email-input'
+          />
+        </div>
         <div>Password</div>
-
-        <input type='password' onChange={this.onPasswordChange} />
+        <div class='password-container'>
+          <input type='password' onChange={this.onPasswordChange} />
+        </div>
         <input
           onClick={this.onSubmitSignIn}
           type='image'
           src='/public/btn.png'
           alt='Sign in'
         />
-        {/* <button onClick={() => onRouteChange("register")}>Register</button> */}
         <Button variant='primary' onClick={() => onRouteChange("register")}>
           Sign up
         </Button>
