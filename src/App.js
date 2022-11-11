@@ -10,7 +10,7 @@ import Navigation from "./components/Navigation";
 class App extends Component {
   constructor() {
     super();
-    this.state = { route: "signed-out", user: { id: "", name: "", email: "" } };
+    this.state = { route: "home", user: { id: "", name: "", email: "" } };
   }
 
   onRouteChange = (route) => {

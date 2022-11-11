@@ -50,6 +50,8 @@ class Register extends React.Component {
         <Button variant='primary' onClick={this.onSubmitRegister}>
           Register
         </Button>
+        <div>Already registered?</div>
+        //login
       </div>
     );
   }
