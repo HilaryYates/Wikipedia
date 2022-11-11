@@ -41,7 +41,11 @@ class SignIn extends React.Component {
           <input type='email' onChange={this.onEmailChange} />
           <div>Password</div>
           <input type='password' onChange={this.onPasswordChange} />
-          <input onClick={this.onSubmitSignIn} type='submit' />
+          <input
+            onClick={this.onSubmitSignIn}
+            type='image'
+            src='../../wikipedia search button.png'
+          />
         </form>
         <button onClick={() => onRouteChange("register")}>Register</button>
       </div>
