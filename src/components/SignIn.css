@@ -7,3 +7,10 @@
   display: flex;
   justify-content: center;
 }
+
+.email-label,
+.password-label {
+  display: flex;
+  justify-content: center;
+  left: 10px;
+}

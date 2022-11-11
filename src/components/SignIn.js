@@ -38,18 +38,22 @@ class SignIn extends React.Component {
     const { onRouteChange } = this.props;
     return (
       <div>
-        <div>Log in or</div>
-        <div>Email</div>
+        <div class='email-label'>Email address</div>
         <div class='email-container'>
           <input
             type='email'
             onChange={this.onEmailChange}
             class='email-input'
+            placeholder='enter email'
           />
         </div>
-        <div>Password</div>
+        <div class='password-label'>Password</div>
         <div class='password-container'>
-          <input type='password' onChange={this.onPasswordChange} />
+          <input
+            type='password'
+            onChange={this.onPasswordChange}
+            placeholder='password'
+          />
         </div>
         <input
           onClick={this.onSubmitSignIn}
@@ -57,6 +61,7 @@ class SignIn extends React.Component {
           src='/public/btn.png'
           alt='Sign in'
         />
+        <p>Log in or</p>
         <Button variant='primary' onClick={() => onRouteChange("register")}>
           Sign up
         </Button>

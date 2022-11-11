@@ -1,18 +1,9 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import Register from "./Register";
-import SignIn from "./Register";
 
 const Navigation = ({ onRouteChange }) => {
   return (
     <div>
-      {/* <Router>
-        <Routes>
-          <Route path='./SignIn.js' element={SignIn} />
-          <Route path='./Register.js' element={Register} />
-        </Routes>
-      </Router>
-      <div> */}
       <Button
         variant='primary'
         to='./SignIn.js'
@@ -26,7 +17,7 @@ const Navigation = ({ onRouteChange }) => {
         onClick={() => onRouteChange("signed-out")}
       >
         {" "}
-        Sign In
+        Sign up
       </Button>
       <Button variant='primary' onClick={() => onRouteChange("signed-out")}>
         Sign Out

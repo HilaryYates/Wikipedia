@@ -38,6 +38,8 @@ class Register extends React.Component {
   };
 
   render() {
+    const { onRouteChange } = this.props;
+
     return (
       <div>
         <div>Name</div>
@@ -45,13 +47,21 @@ class Register extends React.Component {
         <div>Email</div>
         <input type='email' onChange={this.onEmailChange} />
         <div>Password</div>
-        <input type='password' onChange={this.onPasswordChange} />
-        {/* <input type='submit' onClick={this.onSubmitRegister} /> */}
+        <div>
+          <input type='password' onChange={this.onPasswordChange} />
+        </div>
         <Button variant='primary' onClick={this.onSubmitRegister}>
           Create an account
         </Button>
+
         <div>Already registered?</div>
-        //login
+        <Button
+          variant='primary'
+          to='./LogIn.js'
+          onClick={() => onRouteChange("signed-out")}
+        >
+          Log in
+        </Button>
       </div>
     );
   }
