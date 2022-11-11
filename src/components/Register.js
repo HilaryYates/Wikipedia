@@ -48,7 +48,7 @@ class Register extends React.Component {
         <input type='password' onChange={this.onPasswordChange} />
         {/* <input type='submit' onClick={this.onSubmitRegister} /> */}
         <Button variant='primary' onClick={this.onSubmitRegister}>
-          Register
+          Create an account
         </Button>
         <div>Already registered?</div>
         //login
