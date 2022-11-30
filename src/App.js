@@ -1,11 +1,11 @@
 import { Component } from "react";
 import "./index.css";
-import "./components/SearchForm";
-import SignIn from "./components/SignIn";
-import Register from "./components/Register";
-import SearchForm from "./components/SearchForm";
+import "./Components/SearchForm";
+import SignIn from "./Components/SignIn";
+import Register from "./Components/Register";
+import SearchForm from "./Components/SearchForm";
 import Logo from "./Logo";
-import Navigation from "./components/Navigation";
+import Navigation from "./Components/Navigation";
 
 class App extends Component {
   constructor() {
