@@ -12,7 +12,6 @@ class SignIn extends React.Component {
     this.setState({ signInPassword: event.target.value });
   };
   onSubmitSignIn = (event) => {
-    //comment
     event.preventDefault();
     fetch("http://localhost:3000/signin", {
       method: "post",
@@ -24,7 +23,7 @@ class SignIn extends React.Component {
     })
       .then((response) => response.json())
       .then((user) => {
-        console.log(user.id, this.props.loadUser);
+        console.log(user);
         if (user.id) {
           this.props.loadUser(user);
           this.props.onRouteChange("home");
@@ -35,8 +34,9 @@ class SignIn extends React.Component {
     const { onRouteChange } = this.props;
     return (
       <div>
+        <h1>Sign in to</h1>
+        <img src='https://famfonts.com/wp-content/uploads/wikipedia-wide.png' />
         <form>
-          <div>Sign In</div>
           <div>Email</div>
           <input type='email' onChange={this.onEmailChange} />
           <div>Password</div>

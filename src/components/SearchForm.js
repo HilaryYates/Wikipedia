@@ -35,7 +35,11 @@ const SearchForm = () => {
       <div>
         <form className='input' onSubmit={searchQuery}>
           <input placeholder='search wikipedia' onChange={searchField} />
-          <input className='search-img' type='button' value='search' />
+          <input
+            className='search-img'
+            type='image'
+            src='https://upload.wikimedia.org/wikipedia/commons/c/c2/Blue_magnifying_glass_icon.svg'
+          />
         </form>
       </div>
       {resultInfo.map((result) => (
