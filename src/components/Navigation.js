@@ -11,9 +11,13 @@ const Navigation = ({ onRouteChange, name }) => {
   };
   return (
     <div>
-      <p>Hello {capitalizeName(name)}!</p>
+      <p className='sign-out-text'>Hello {capitalizeName(name)}!</p>
       {/* <button onClick={() => onRouteChange("signed-out")}>Sign Out</button> */}
-      <Button onClick={() => onRouteChange("signed-out")} variant='primary'>
+      <Button
+        onClick={() => onRouteChange("signed-out")}
+        variant='primary'
+        className='sign-out-btn'
+      >
         Sign out
       </Button>
     </div>

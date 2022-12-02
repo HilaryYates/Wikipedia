@@ -55,3 +55,13 @@ html {
 .sign-in-header {
   display: inline-block;
 }
+
+.sign-out-btn {
+  display: inline-block;
+}
+
+.sign-out-text {
+  display: inline-block;
+  padding-right: 1120px;
+  padding-left: 50px;
+}
