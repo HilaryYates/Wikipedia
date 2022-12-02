@@ -41,20 +41,28 @@ class SignIn extends React.Component {
           className='wikipedia-font'
           src='https://famfonts.com/wp-content/uploads/wikipedia-wide.png'
         />
-        <form>
-          <div>Email</div>
+        <form className='sign-in-form'>
+          <div className='email-label'>Email</div>
           <input type='email' onChange={this.onEmailChange} />
-          <div>Password</div>
-          <input type='password' onChange={this.onPasswordChange} />
-          {/* <input onClick={this.onSubmitSignIn} type='submit' /> */}
-          <Button onClick={this.onSubmitSignIn} type='submit' variant='primary'>
-            Submit
-          </Button>
+          <div className='sign-in-password-group'>
+            <div className='password-label'>Password</div>
+            <input type='password' onChange={this.onPasswordChange} />
+          </div>
+          <div className='sign-in-submit-btn'>
+            <Button
+              onClick={this.onSubmitSignIn}
+              type='submit'
+              variant='primary'
+            >
+              Submit
+            </Button>
+          </div>
         </form>
-        <Button onClick={() => onRouteChange("register")} variant='primary'>
-          Register
-        </Button>
-        {/* <button onClick={() => onRouteChange("register")}>Register</button> */}
+        <div className='sign-in-register-btn'>
+          <Button onClick={() => onRouteChange("register")} variant='light'>
+            Create an account
+          </Button>
+        </div>
       </div>
     );
   }
