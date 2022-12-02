@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class Register extends React.Component {
   constructor() {
@@ -44,7 +46,10 @@ class Register extends React.Component {
         <input type='email' onChange={this.onEmailChange} />
         <div>Password</div>
         <input type='password' onChange={this.onPasswordChange} />
-        <input type='submit' onClick={this.onSubmitRegister} />
+        {/* <input type='submit' onClick={this.onSubmitRegister} /> */}
+        <Button onClick={this.onSubmitRegister} variant='primary'>
+          Register
+        </Button>
       </div>
     );
   }

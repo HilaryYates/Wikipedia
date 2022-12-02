@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -34,16 +36,25 @@ class SignIn extends React.Component {
     const { onRouteChange } = this.props;
     return (
       <div>
-        <h1>Sign in to</h1>
-        <img src='https://famfonts.com/wp-content/uploads/wikipedia-wide.png' />
+        <h1 className='sign-in-header'>Sign in to</h1>
+        <img
+          className='wikipedia-font'
+          src='https://famfonts.com/wp-content/uploads/wikipedia-wide.png'
+        />
         <form>
           <div>Email</div>
           <input type='email' onChange={this.onEmailChange} />
           <div>Password</div>
           <input type='password' onChange={this.onPasswordChange} />
-          <input onClick={this.onSubmitSignIn} type='submit' />
+          {/* <input onClick={this.onSubmitSignIn} type='submit' /> */}
+          <Button onClick={this.onSubmitSignIn} type='submit' variant='primary'>
+            Submit
+          </Button>
         </form>
-        <button onClick={() => onRouteChange("register")}>Register</button>
+        <Button onClick={() => onRouteChange("register")} variant='primary'>
+          Register
+        </Button>
+        {/* <button onClick={() => onRouteChange("register")}>Register</button> */}
       </div>
     );
   }

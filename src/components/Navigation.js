@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navigation = ({ onRouteChange, name }) => {
   const capitalizeName = (name) => {
@@ -10,7 +12,10 @@ const Navigation = ({ onRouteChange, name }) => {
   return (
     <div>
       <p>Hello {capitalizeName(name)}!</p>
-      <button onClick={() => onRouteChange("signed-out")}>Sign Out</button>
+      {/* <button onClick={() => onRouteChange("signed-out")}>Sign Out</button> */}
+      <Button onClick={() => onRouteChange("signed-out")} variant='primary'>
+        Sign out
+      </Button>
     </div>
   );
 };
