@@ -99,3 +99,20 @@ html {
 .sign-in-password-group {
   padding-top: 10px;
 }
+
+.name-label {
+  padding-bottom: 10px;
+}
+
+.register-btn {
+  padding-left: 625px;
+  padding-top: 20px;
+}
+
+.register-form {
+  padding-top: 80px;
+  padding-left: 580px;
+}
+
+.wikipedia-register-img {
+}
